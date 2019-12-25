@@ -1,41 +1,49 @@
 {
-  "name": "typescript-package-starter",
-  "version": "1.0.1",
-  "description": "TypeScript boilerplate for NPM or Github Packages",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "test": "mocha --timeout 60000 --exit -r ts-node/register test/**/*.spec.ts",
-    "build": "tsc",
-    "deploy": "npm publish"
-  },
-  "keywords": [
-    "typescript",
-    "github packages",
-    "npm packages",
-    "boilerplate"
-  ],
-  "author": "Dale Nguyen",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dalenguyen/typescript-package-starter.git"
-  },
-  "devDependencies": {
-    "@types/chai": "^4.2.2",
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^12.7.5",
-    "chai": "^4.2.0",
-    "mocha": "^5.2.0",
-    "tslint": "^5.20.0",
-    "ts-node": "^8.3.0",
-    "typescript": "~3.6.3"
-  },
-  "dependencies": {},
-  "engines": {
-    "node": ">=8"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@dalenguyen"
-  }
+    "name": "@wassimbenzarti/scheduler",
+    "version": "0.0.1",
+    "description": "This package adds a scheduled hook",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "test": "mocha --timeout 60000 --exit -r ts-node/register test/**/*.spec.ts",
+        "test:watch": "mocha -w --watch-extension ts --timeout 60000 --exit -r ts-node/register test/**/*.spec.ts",
+        "build": "tsc",
+        "prepublish": "npm run build",
+        "deploy": "npm publish"
+    },
+    "keywords": [
+        "schedule",
+        "hook",
+        "web hook",
+        "reminder"
+    ],
+    "author": "Wassim Benzarti",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/WassimBenzarti/scheduler-hook.git"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.2.2",
+        "@types/isomorphic-fetch": "^0.0.35",
+        "@types/mocha": "^5.2.7",
+        "@types/moment-timezone": "^0.5.12",
+        "@types/node": "^12.7.5",
+        "chai": "^4.2.0",
+        "es6-promise": "^4.2.8",
+        "mocha": "^5.2.0",
+        "moment-timezone": "^0.5.27",
+        "ts-node": "^8.3.0",
+        "tslint": "^5.20.0",
+        "typescript": "~3.6.3"
+    },
+    "dependencies": {
+        "isomorphic-fetch": "^2.2.1"
+    },
+    "engines": {
+        "node": ">=8"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    }
 }
